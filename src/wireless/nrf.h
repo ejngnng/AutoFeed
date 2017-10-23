@@ -11,6 +11,9 @@
 
 #include <Arduino.h>
 
-
+typedef enum nrf_rs_e{
+  RS_OK = 0,
+  RS_FAIL
+}nrf_rs_t;
 
 #endif

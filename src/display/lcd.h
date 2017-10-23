@@ -11,6 +11,9 @@
 
 #include "config/common.h"
 
-
+typedef enum lcd_rs_e{
+  RS_OK = 0,
+  RS_FAIL
+}lcd_rs_t;
 
 #endif

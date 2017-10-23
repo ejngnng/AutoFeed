@@ -18,6 +18,11 @@
 #define KEY_CUT_START 9
 #define KEY_CUT_STOP  8
 
+typedef enum key_rs_e{
+  RS_OK = 0,
+  RS_FAIL
+}key_rs_t;
+
 void key_port_init(void);
 
 #endif
