@@ -10,6 +10,7 @@
 #include <Arduino.h>
 #include "config/common.h"
 #include "wireless/nrf.h"
+#include "rtc/rtc_ds3231.h"
 
 ctl_obj_t ctl_obj;
 ctl_obj_t receive_obj;
@@ -33,6 +34,8 @@ void setup(){
 #endif
   memset(&ctl_obj, 0, sizeof(ctl_obj_t));
   memset(&receive_obj, 0, sizeof(ctl_obj_t));
+
+ ds3231_init();
 }
 
 void loop(){
@@ -54,6 +57,8 @@ void loop(){
     Serial.println(receive_obj.value);
   }
 #endif
+ show_clock();
+ delay(1000);
 }
 
 void updateMessage() {
