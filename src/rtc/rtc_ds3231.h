@@ -15,10 +15,22 @@
 
 #define  DEBUG_DS3231     Serial
 
+typedef struct date_time_s{
+  unsigned char year;
+  unsigned char month;
+  unsigned char date;
+  unsigned char hour;
+  unsigned char minute;
+  unsigned char second;
+  unsigned char week;
+}date_time_t;
+
 void ds3231_init();
 
 void set_clock();
 
 void show_clock();
+
+void get_time(date_time_t *date_time);
 
 #endif

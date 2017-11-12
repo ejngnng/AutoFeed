@@ -43,3 +43,13 @@ void show_clock(){
   Serial.print(" ");
   Serial.println(Clock.getDoW(), DEC);
 }
+
+void get_time(date_time_t *date_time){
+  date_time->year = Clock.getYear();
+  date_time->month = Clock.getMonth(Century);
+  date_time->date = Clock.getDate();
+  date_time->hour = Clock.getHour(h12, PM);
+  date_time->minute = Clock.getMinute();
+  date_time->second = Clock.getSecond();
+  date_time->second = Clock.getSecond();
+}
